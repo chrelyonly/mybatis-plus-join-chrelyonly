@@ -1,9 +1,9 @@
 {
   "groups": [
     {
-      "sourceType": "com.github.yulichang.autoconfigure.MybatisPlusJoinProperties",
+      "sourceType": "com.github.chrelyonly.autoconfigure.MybatisPlusJoinProperties",
       "name": "mybatis-plus-join",
-      "type": "com.github.yulichang.autoconfigure.MybatisPlusJoinProperties"
+      "type": "com.github.chrelyonly.autoconfigure.MybatisPlusJoinProperties"
     }
   ],
   "properties": [

@@ -2,11 +2,11 @@ package com.baomidou.mybatisplus.core.metadata;
 
 import com.baomidou.mybatisplus.core.toolkit.ClassUtils;
 import com.baomidou.mybatisplus.core.toolkit.ReflectionKit;
-import com.github.yulichang.annotation.EntityMapping;
-import com.github.yulichang.annotation.FieldMapping;
-import com.github.yulichang.exception.MPJException;
-import com.github.yulichang.mapper.MPJTableInfo;
-import com.github.yulichang.toolkit.TableHelper;
+import com.github.chrelyonly.annotation.EntityMapping;
+import com.github.chrelyonly.annotation.FieldMapping;
+import com.github.chrelyonly.exception.MPJException;
+import com.github.chrelyonly.mapper.MPJTableInfo;
+import com.github.chrelyonly.toolkit.TableHelper;
 import org.apache.ibatis.session.Configuration;
 
 import java.lang.reflect.Field;
@@ -105,19 +105,19 @@ public class MPJTableInfoHelper {
         mpjTableInfo.setHasMappingField(existMappingField);
         mpjTableInfo.setHasMappingOrField(existMapping || existMappingField);
         /* 关系映射初始化 */
-        List<com.github.yulichang.mapper.MPJTableFieldInfo> mpjFieldList = new ArrayList<>();
+        List<com.github.chrelyonly.mapper.MPJTableFieldInfo> mpjFieldList = new ArrayList<>();
         List<Field> fields = ReflectionKit.getFieldList(ClassUtils.getUserClass(mpjTableInfo.getTableInfo().getEntityType()));
         for (Field field : fields) {
             if (existMapping) {
                 EntityMapping mapping = field.getAnnotation(EntityMapping.class);
                 if (mapping != null) {
-                    mpjFieldList.add(new com.github.yulichang.mapper.MPJTableFieldInfo(mpjTableInfo.getTableInfo().getEntityType(), mapping, field));
+                    mpjFieldList.add(new com.github.chrelyonly.mapper.MPJTableFieldInfo(mpjTableInfo.getTableInfo().getEntityType(), mapping, field));
                 }
             }
             if (existMappingField) {
                 FieldMapping mapping = field.getAnnotation(FieldMapping.class);
                 if (mapping != null) {
-                    mpjFieldList.add(new com.github.yulichang.mapper.MPJTableFieldInfo(mpjTableInfo.getTableInfo().getEntityType(), mapping, field));
+                    mpjFieldList.add(new com.github.chrelyonly.mapper.MPJTableFieldInfo(mpjTableInfo.getTableInfo().getEntityType(), mapping, field));
                 }
             }
         }

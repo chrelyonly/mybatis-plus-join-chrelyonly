@@ -1,14 +1,14 @@
-package com.github.yulichang.autoconfigure;
+package com.github.chrelyonly.autoconfigure;
 
 import com.baomidou.mybatisplus.autoconfigure.MybatisPlusLanguageDriverAutoConfiguration;
 import com.baomidou.mybatisplus.core.injector.AbstractSqlInjector;
 import com.baomidou.mybatisplus.core.injector.DefaultSqlInjector;
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
-import com.github.yulichang.config.ConfigProperties;
-import com.github.yulichang.config.MPJInterceptorConfig;
-import com.github.yulichang.injector.MPJSqlInjector;
-import com.github.yulichang.interceptor.MPJInterceptor;
-import com.github.yulichang.toolkit.SpringContentUtils;
+import com.github.chrelyonly.config.ConfigProperties;
+import com.github.chrelyonly.config.MPJInterceptorConfig;
+import com.github.chrelyonly.injector.MPJSqlInjector;
+import com.github.chrelyonly.interceptor.MPJInterceptor;
+import com.github.chrelyonly.toolkit.SpringContentUtils;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.slf4j.Logger;
@@ -106,7 +106,7 @@ public class MybatisPlusJoinAutoConfiguration {
         @Override
         @SuppressWarnings("NullableProblems")
         public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
-            new com.github.yulichang.config.MappingConfig();
+            new com.github.chrelyonly.config.MappingConfig();
         }
     }
 

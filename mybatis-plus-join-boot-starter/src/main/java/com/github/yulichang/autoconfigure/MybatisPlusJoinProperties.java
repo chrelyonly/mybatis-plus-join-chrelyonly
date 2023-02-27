@@ -1,4 +1,4 @@
-package com.github.yulichang.autoconfigure;
+package com.github.chrelyonly.autoconfigure;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

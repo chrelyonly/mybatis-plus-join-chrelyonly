@@ -1,4 +1,4 @@
-package com.github.yulichang.annotation;
+package com.github.chrelyonly.annotation;
 
 
 import java.lang.annotation.*;

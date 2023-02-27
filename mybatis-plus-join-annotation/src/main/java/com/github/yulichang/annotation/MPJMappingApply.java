@@ -1,4 +1,4 @@
-package com.github.yulichang.annotation;
+package com.github.chrelyonly.annotation;
 
 /**
  * 映射表条件

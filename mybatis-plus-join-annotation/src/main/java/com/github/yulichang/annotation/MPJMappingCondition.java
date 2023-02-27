@@ -1,4 +1,4 @@
-package com.github.yulichang.annotation;
+package com.github.chrelyonly.annotation;
 
 import com.baomidou.mybatisplus.core.enums.SqlKeyword;
 
