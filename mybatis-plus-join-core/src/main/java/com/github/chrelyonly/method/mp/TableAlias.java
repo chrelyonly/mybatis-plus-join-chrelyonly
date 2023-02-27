@@ -1,0 +1,24 @@
+package com.github.chrelyonly.method.mp;
+
+import com.baomidou.mybatisplus.core.metadata.TableInfo;
+import com.baomidou.mybatisplus.core.toolkit.Constants;
+import com.baomidou.mybatisplus.core.toolkit.sql.SqlScriptUtils;
+import com.github.chrelyonly.interfaces.MPJBaseJoin;
+import com.github.chrelyonly.method.MPJBaseMethod;
+
+/**
+ * 兼容原生方法
+ *
+ * @author yulichang
+ * @since 1.2.0
+ */
+public interface TableAlias extends Constants, MPJBaseMethod {
+
+    default String getTableName(TableInfo tableInfo) {
+        String from = SqlScriptUtils.convertIf("${ew.from}",
+                String.format("%s != null and %s != ''", "ew.from", "ew.from"), true);
+        String alias = SqlScriptUtils.convertIf("${ew.alias}" + NEWLINE + from,
+                String.format("%s != null and %s instanceof %s", Constants.WRAPPER, Constants.WRAPPER, MPJBaseJoin.class.getName()), true);
+        return tableInfo.getTableName() + SPACE + alias;
+    }
+}
