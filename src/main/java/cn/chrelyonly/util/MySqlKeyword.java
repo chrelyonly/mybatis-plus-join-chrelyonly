@@ -9,6 +9,7 @@ import java.util.Map;
 
 /**
  * warpper处理转换sql
+ * @author chrelyonly
  */
 public class MySqlKeyword {
     private static final String SQL_REGEX = "'|%|--|insert|delete|select|count|group|union|drop|truncate|alter|grant|execute|exec|xp_cmdshell|call|declare|sql";
