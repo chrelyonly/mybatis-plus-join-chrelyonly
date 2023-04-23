@@ -3,6 +3,7 @@ package cn.chrelyonly.mapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.github.yulichang.base.MPJBaseMapper;
 import com.github.yulichang.interfaces.MPJBaseJoin;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ public interface MyBaseMapper<T> extends MPJBaseMapper<T> {
      * @return 总记录数
      */
     @Override
-    Long selectJoinCount(MPJBaseJoin<T> wrapper);
+    Long selectJoinCount(@Param("ew") MPJBaseJoin<T> wrapper);
 
     /**
      * 连表查询返回一条记录
@@ -30,7 +31,7 @@ public interface MyBaseMapper<T> extends MPJBaseMapper<T> {
      * @return DTO
      */
     @Override
-    <DTO> DTO selectJoinOne(Class<DTO> clazz, MPJBaseJoin<T> wrapper);
+    <DTO> DTO selectJoinOne(@Param("resultTypeClass_Eg1sG") Class<DTO> clazz,@Param("ew")  MPJBaseJoin<T> wrapper);
 
     /**
      * 连表查询返回Map
@@ -39,7 +40,7 @@ public interface MyBaseMapper<T> extends MPJBaseMapper<T> {
      * @return Map
      */
     @Override
-    Map<String, Object> selectJoinMap(MPJBaseJoin<T> wrapper);
+    Map<String, Object> selectJoinMap(@Param("ew") MPJBaseJoin<T> wrapper);
 
     /**
      * 连表查询返回记录集合
@@ -49,7 +50,7 @@ public interface MyBaseMapper<T> extends MPJBaseMapper<T> {
      * @return DTO集合
      */
     @Override
-    <DTO> List<DTO> selectJoinList(Class<DTO> clazz, MPJBaseJoin<T> wrapper);
+    <DTO> List<DTO> selectJoinList(@Param("resultTypeClass_Eg1sG") Class<DTO> clazz,@Param("ew")  MPJBaseJoin<T> wrapper);
 
     /**
      * 连表查询返回Map集合
@@ -58,7 +59,7 @@ public interface MyBaseMapper<T> extends MPJBaseMapper<T> {
      * @return Map集合
      */
     @Override
-    List<Map<String, Object>> selectJoinMaps(MPJBaseJoin<T> wrapper);
+    List<Map<String, Object>> selectJoinMaps(@Param("ew") MPJBaseJoin<T> wrapper);
 
     /**
      * 连表查询返回记录集合并分页
@@ -69,7 +70,7 @@ public interface MyBaseMapper<T> extends MPJBaseMapper<T> {
      * @return DTO集合
      */
     @Override
-    <DTO, P extends IPage<DTO>> P selectJoinPage(P page, Class<DTO> clazz, MPJBaseJoin<T> wrapper);
+    <DTO, P extends IPage<DTO>> P selectJoinPage(P page,@Param("resultTypeClass_Eg1sG") Class<DTO> clazz,@Param("ew")  MPJBaseJoin<T> wrapper);
 
     /**
      * 连表查询返回Map集合并分页

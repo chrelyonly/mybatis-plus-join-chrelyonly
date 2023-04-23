@@ -1,6 +1,5 @@
 package cn.chrelyonly.config;
 
-import cn.hutool.core.lang.Console;
 import com.baomidou.mybatisplus.core.injector.AbstractMethod;
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 import com.baomidou.mybatisplus.core.metadata.TableInfo;
@@ -9,7 +8,6 @@ import com.github.yulichang.injector.MPJSqlInjector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
@@ -19,7 +17,6 @@ import java.util.List;
  * 用于扩展mybatis-plus-join连表插件
  */
 @Configuration
-@ComponentScan("cn.chrelyonly")
 public class MybatisPlusConfig {
 
     private static final Logger log = LoggerFactory.getLogger(MybatisPlusConfig.class);

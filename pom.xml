@@ -7,7 +7,7 @@
     <groupId>cn.chrelyonly</groupId>
     <artifactId>mybatis-plus-join-chrelyonly</artifactId>
     <name>${project.artifactId}</name>
-    <version>2.0.3.PLUS</version>
+    <version>3.1.0.PLUS</version>
     <description>链表插件</description>
 
     <dependencies>
