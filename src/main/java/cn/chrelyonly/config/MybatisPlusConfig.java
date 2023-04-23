@@ -1,5 +1,6 @@
 package cn.chrelyonly.config;
 
+import cn.hutool.core.lang.Console;
 import com.baomidou.mybatisplus.core.injector.AbstractMethod;
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 import com.baomidou.mybatisplus.core.metadata.TableInfo;

@@ -6,9 +6,10 @@ import java.lang.annotation.*;
 
 /**
  * @author chrelyonly
- * 插件入口
  */
+@Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
+@Documented
 @Import(MybatisPlusConfig.class)
 public @interface EnableMybatisPlusConfig {
 }
