@@ -1,5 +1,9 @@
 package cn.chrelyonly.config;
 
+import cn.hutool.core.io.IORuntimeException;
+import cn.hutool.core.io.resource.ClassPathResource;
+import cn.hutool.core.io.resource.Resource;
+import cn.hutool.core.lang.Console;
 import com.baomidou.mybatisplus.core.injector.AbstractMethod;
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 import com.baomidou.mybatisplus.core.metadata.TableInfo;
@@ -25,6 +29,13 @@ public class MybatisPlusConfig {
      */
     MybatisPlusConfig(){
         log.info("mybatis-plus连表插件初始化");
+        try {
+            Resource resource = new ClassPathResource("startLogo.txt");
+            String text = resource.readUtf8Str();
+            Console.log(text);
+        } catch (IORuntimeException ignored) {
+            log.info("初始化logo失败");
+        }
     };
     @Bean
     public ISqlInjector sqlInjector() {
