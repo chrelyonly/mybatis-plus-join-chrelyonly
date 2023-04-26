@@ -40,6 +40,8 @@ public class MySqlKeyword {
     public static void buildCondition(Map<String, Object> query, MPJLambdaWrapper<?> qw) {
         if (!Func.isEmpty(query)) {
             query.forEach((k, v) -> {
+                k = filter(k);
+                v = filter(String.valueOf(v));
                 if (!Func.hasEmpty(k, v) && !k.endsWith("_ignore")) {
                     if (k.endsWith("_equal")) {
                         qw.eq(getColumn(k, "_equal"), v);
