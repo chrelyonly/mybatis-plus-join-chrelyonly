@@ -6,7 +6,7 @@
 
     <groupId>cn.chrelyonly</groupId>
     <artifactId>mybatis-plus-join-chrelyonly</artifactId>
-    <version>3.2.3.PLUS</version>
+    <version>3.2.0.PLUS</version>
     <name>${project.artifactId}</name>
     <description>链表插件</description>
 
@@ -29,8 +29,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <source>8</source>
+                    <target>8</target>
                     <encoding>UTF-8</encoding>
                     <compilerArgs>
                         <arg>-parameters</arg>
@@ -46,4 +46,23 @@
             <url>http://maven.chrelyonly.cn/repository/chrelyonly/</url>
         </repository>
     </distributionManagement>
+<!--依赖仓库-->
+    <repositories>
+        <repository>
+            <id>aliyun-repos</id>
+            <name>Aliyun Public Repository</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+<!--    插件仓库-->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyun-plugin</id>
+            <name>Aliyun Public Plugin</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
