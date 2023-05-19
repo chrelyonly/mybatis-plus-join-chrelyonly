@@ -1,8 +1,8 @@
 package cn.chrelyonly.util;
+
 import cn.chrelyonly.mapper.MyBaseMapper;
 import cn.chrelyonly.service.MyBaseService;
 import cn.chrelyonly.service.impl.MyBaseServiceImpl;
-import org.springblade.core.mp.base.BaseEntity;
 
 /**
  * 复杂service构造器
@@ -24,7 +24,7 @@ public class MyBaseServiceImplUtil {
      * @param <T> entity   自动装配
      * 食用教程: MyBaseService<返回接口的mapper> service = MyBaseServiceImplUtil.build(传入对应接口的mapper.class);
      */
-    public static <M extends MyBaseMapper<T>, T extends BaseEntity> MyBaseService<T> build(Class<M> mClass){
+    public static <M extends MyBaseMapper<T>, T> MyBaseService<T> build(Class<M> mClass){
         return new MyBaseServiceImpl<>(mClass);
     }
 
