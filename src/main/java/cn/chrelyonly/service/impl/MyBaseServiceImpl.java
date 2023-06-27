@@ -17,7 +17,7 @@ import com.github.yulichang.toolkit.SpringContentUtils;
  * 可重写任意接口
  */
 public class MyBaseServiceImpl<M extends MyBaseMapper<T>, T> extends MPJBaseServiceImpl<M, T> implements MyBaseService<T> {
-    /**
+    /**`
      * 核心方法
       * @param mClass mapper接口类
      */

@@ -11,5 +11,5 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @Documented
 @Import(MyAutoConfig.class)
-public @interface EnableMybatisPlusConfig {
+public @interface MyEnableMybatisPlusJoinConfig {
 }
