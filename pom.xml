@@ -6,10 +6,76 @@
 
     <groupId>cn.chrelyonly</groupId>
     <artifactId>mybatis-plus-join-chrelyonly</artifactId>
-    <version>3.2.2.PLUS</version>
+    <version>3.2.1.PLUS</version>
     <name>${project.artifactId}</name>
-    <description>链表插件</description>
+    <!-- 项目的详细描述, Maven 产生的文档用。 当这个元素能够用HTML格式描述时（例如，CDATA中的文本会被解析器忽略，
+      就可以包含HTML标签）， 不鼓励使用纯文本描述。如果你需要修改产生的web站点的索引页面，你应该修改你自己的
+      索引页文件，而不是调整这里的文档。 -->
+    <description>链表插件_by_chrelyonly</description>
+    <!-- 项目产生的构件类型，例如jar、war、ear、pom。插件可以创建他们自己的构件类型，所以前面列的不是全部构件类型 -->
+    <packaging> jar </packaging>
+    <!-- 项目主页的URL, Maven产生的文档用 -->
+    <url>httsp://chrelyonly.cn</url>
+    <!-- 项目创建年份，4位数字。当产生版权信息时需要使用这个值。 -->
+    <inceptionYear />
+    <!-- 项目开发者列表 -->
+    <developers>
+        <!-- 某个项目开发者的信息 -->
+        <developer>
+            <!-- SCM里项目开发者的唯一标识符 -->
+            <id>chrelyonly</id>
 
+            <!-- 项目开发者的全名 -->
+            <name>chrelyonly</name>
+
+            <!-- 项目开发者的email -->
+            <email>1172576293@qq.com</email>
+
+            <!-- 项目开发者的主页的URL -->
+            <url>https://chrelyonly.cn</url>
+
+            <!-- 项目开发者在项目中扮演的角色，角色元素描述了各种角色 -->
+            <roles>
+                <role> administer </role>
+            </roles>
+
+            <!-- 项目开发者所属组织 -->
+            <organization> chrelyonly </organization>
+
+            <!-- 项目开发者所属组织的URL -->
+            <organizationUrl> https://chrelyonly.cn </organizationUrl>
+
+            <!-- 项目开发者属性，如即时消息如何处理等 -->
+            <properties>
+                <dept> QQ </dept>
+            </properties>
+
+            <!-- 项目开发者所在时区， -11到12范围内的整数。 -->
+            <timezone> +8 </timezone>
+        </developer>
+    </developers>
+    <!-- 该元素描述了项目所有License列表。 应该只列出该项目的license列表，不要列出依赖项目的 license列表。
+      如果列出多个license，用户可以选择它们中的一个而不是接受所有license。 -->
+    <licenses>
+        <!-- 描述了项目的license，用于生成项目的web站点的license页面，其他一些报表和validation也会用到该元素。 -->
+        <license>
+            <!-- license用于法律上的名称 -->
+            <name> Apache 2 </name>
+
+            <!-- 官方的license正文页面的URL -->
+            <url> http://www.baidu.com/banseon/LICENSE-2.0.txt </url>
+
+            <!-- 项目分发的主要方式：
+                    repo，可以从Maven库下载
+                    manual， 用户必须手动下载和安装依赖 -->
+            <distribution> repo </distribution>
+
+            <!-- 关于license的补充信息 -->
+            <comments> A  license </comments>
+        </license>
+    </licenses>
+    <!-- 以值替代名称，Properties可以在整个POM中使用，也可以作为触发条件（见settings.xml配置文件里
+       activation元素的说明）。格式是<name>value</name>。 -->
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
