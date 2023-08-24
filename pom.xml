@@ -6,10 +6,17 @@
 
     <groupId>cn.chrelyonly</groupId>
     <artifactId>mybatis-plus-join-chrelyonly</artifactId>
-    <version>3.2.0.PLUS</version>
+    <version>3.2.1.PLUS</version>
     <name>${project.artifactId}</name>
     <description>链表插件</description>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
     <dependencies>
         <!-- Mybatis-Plus-join -->
         <dependency>
@@ -25,17 +32,30 @@
     </dependencies>
     <build>
         <plugins>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <source>8</source>-->
+<!--                    <target>8</target>-->
+<!--                    <encoding>UTF-8</encoding>-->
+<!--                    <compilerArgs>-->
+<!--                        <arg>-parameters</arg>-->
+<!--                    </compilerArgs>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+            <!-- 要将源码放上去，需要加入这个插件 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                    <encoding>UTF-8</encoding>
-                    <compilerArgs>
-                        <arg>-parameters</arg>
-                    </compilerArgs>
-                </configuration>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -43,7 +63,7 @@
     <distributionManagement>
         <repository>
             <id>chrelyonly</id>
-            <url>http://maven.chrelyonly.cn/repository/chrelyonly/</url>
+            <url>https://maven.chrelyonly.cn/repository/chrelyonly/</url>
         </repository>
     </distributionManagement>
 <!--依赖仓库-->
