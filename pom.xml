@@ -6,7 +6,7 @@
 
     <groupId>cn.chrelyonly</groupId>
     <artifactId>mybatis-plus-join-chrelyonly</artifactId>
-    <version>3.2.1.PLUS</version>
+    <version>3.2.2.PLUS</version>
     <name>${project.artifactId}</name>
     <description>链表插件</description>
 
@@ -48,6 +48,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.0</version>
                 <executions>
                     <execution>
                         <phase>compile</phase>
