@@ -6,7 +6,7 @@
 
     <groupId>cn.chrelyonly</groupId>
     <artifactId>mybatis-plus-join-chrelyonly</artifactId>
-    <version>3.3.0.PLUS</version>
+    <version>3.3.2.PLUS</version>
     <name>${project.artifactId}</name>
     <!-- 项目的详细描述, Maven 产生的文档用。 当这个元素能够用HTML格式描述时（例如，CDATA中的文本会被解析器忽略，
       就可以包含HTML标签）， 不鼓励使用纯文本描述。如果你需要修改产生的web站点的索引页面，你应该修改你自己的
@@ -94,6 +94,11 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.23</version>
         </dependency>
     </dependencies>
     <build>
