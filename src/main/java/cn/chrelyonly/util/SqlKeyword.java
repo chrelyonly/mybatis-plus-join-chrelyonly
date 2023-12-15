@@ -56,6 +56,7 @@ public class SqlKeyword {
                 query.forEach((k, v) -> {
                     if (!hasEmpty(k, v) && !k.endsWith("_ignore")) {
                         k = filter(k);
+                        k = "t." + k;
                         if (k.endsWith("_equal")) {
                             qw.eq(getColumn(k, "_equal"), v);
                         } else if (k.endsWith("_notequal")) {
