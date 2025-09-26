@@ -6,7 +6,7 @@
 
     <groupId>cn.chrelyonly.maven</groupId>
     <artifactId>mybatis-plus-join-chrelyonly</artifactId>
-    <version>3.4.5.PLUS</version>
+    <version>4.0.0.PLUS</version>
     <name>${project.artifactId}</name>
     <!-- 项目的详细描述, Maven 产生的文档用。 当这个元素能够用HTML格式描述时（例如，CDATA中的文本会被解析器忽略，
       就可以包含HTML标签）， 不鼓励使用纯文本描述。如果你需要修改产生的web站点的索引页面，你应该修改你自己的
@@ -77,7 +77,7 @@
     <!-- 以值替代名称，Properties可以在整个POM中使用，也可以作为触发条件（见settings.xml配置文件里
        activation元素的说明）。格式是<name>value</name>。 -->
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -88,20 +88,20 @@
         <dependency>
             <groupId>com.github.yulichang</groupId>
             <artifactId>mybatis-plus-join-boot-starter</artifactId>
-            <version>1.4.11</version>
+            <version>1.5.4</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.6</version>
+            <version>3.5.14</version>
 <!--            <scope>provided</scope>-->
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.8.25</version>
+            <version>5.8.40</version>
             <scope>compile</scope>
 <!--            <scope>provided</scope>-->
         </dependency>
