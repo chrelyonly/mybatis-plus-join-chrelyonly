@@ -3,8 +3,8 @@ package cn.chrelyonly.maven.service.impl;
 
 import cn.chrelyonly.maven.mapper.MyBaseMapper;
 import cn.chrelyonly.maven.service.MyBaseService;
+import cn.hutool.extra.spring.SpringUtil;
 import com.github.yulichang.base.MPJBaseServiceImpl;
-import com.github.yulichang.toolkit.SpringContentUtils;
 
 /**
  * 复杂service构造器
@@ -22,6 +22,6 @@ public class MyBaseServiceImpl<M extends MyBaseMapper<T>, T> extends MPJBaseServ
       * @param mClass mapper接口类
      */
     public MyBaseServiceImpl(Class<M> mClass){
-        this.baseMapper = SpringContentUtils.getBean(mClass);
+        this.baseMapper = SpringUtil.getBean(mClass);
     }
 }
